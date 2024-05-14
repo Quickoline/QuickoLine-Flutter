@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1083735886509",
+    "project_id": "quickoline",
+    "storage_bucket": "quickoline.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083735886509:android:eaeca52bb42878a9b91424",
+        "android_client_info": {
+          "package_name": "com.mycompany.Quickoline"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO5TC5QCI9xrwXxGHVAU0PYyu9Ox4J9Rw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
