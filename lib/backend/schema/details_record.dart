@@ -5,6 +5,7 @@ import 'package:collection/collection.dart';
 import '/backend/schema/util/firestore_util.dart';
 
 import 'index.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 
 class DetailsRecord extends FirestoreRecord {
   DetailsRecord._(
@@ -69,6 +70,16 @@ class DetailsRecord extends FirestoreRecord {
   String get examName => _examName ?? '';
   bool hasExamName() => _examName != null;
 
+  // "application_fee" field.
+  double? _applicationFee;
+  double get applicationFee => _applicationFee ?? 0.0;
+  bool hasApplicationFee() => _applicationFee != null;
+
+  // "service_charge" field.
+  double? _serviceCharge;
+  double get serviceCharge => _serviceCharge ?? 0.0;
+  bool hasServiceCharge() => _serviceCharge != null;
+
   void _initializeFields() {
     _appStartDate = snapshotData['app_start_date'] as DateTime?;
     _appEndDate = snapshotData['app_end_date'] as DateTime?;
@@ -81,6 +92,8 @@ class DetailsRecord extends FirestoreRecord {
     _resultDate = snapshotData['result_date'] as DateTime?;
     _requiredDocuments = getDataList(snapshotData['required_documents']);
     _examName = snapshotData['exam_name'] as String?;
+    _applicationFee = castToType<double>(snapshotData['application_fee']);
+    _serviceCharge = castToType<double>(snapshotData['service_charge']);
   }
 
   static CollectionReference get collection =>
@@ -127,6 +140,8 @@ Map<String, dynamic> createDetailsRecordData({
   DateTime? answerKeyDate,
   DateTime? resultDate,
   String? examName,
+  double? applicationFee,
+  double? serviceCharge,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -139,6 +154,8 @@ Map<String, dynamic> createDetailsRecordData({
       'answer_key_date': answerKeyDate,
       'result_date': resultDate,
       'exam_name': examName,
+      'application_fee': applicationFee,
+      'service_charge': serviceCharge,
     }.withoutNulls,
   );
 
@@ -161,7 +178,9 @@ class DetailsRecordDocumentEquality implements Equality<DetailsRecord> {
         e1?.answerKeyDate == e2?.answerKeyDate &&
         e1?.resultDate == e2?.resultDate &&
         listEquality.equals(e1?.requiredDocuments, e2?.requiredDocuments) &&
-        e1?.examName == e2?.examName;
+        e1?.examName == e2?.examName &&
+        e1?.applicationFee == e2?.applicationFee &&
+        e1?.serviceCharge == e2?.serviceCharge;
   }
 
   @override
@@ -176,7 +195,9 @@ class DetailsRecordDocumentEquality implements Equality<DetailsRecord> {
         e?.answerKeyDate,
         e?.resultDate,
         e?.requiredDocuments,
-        e?.examName
+        e?.examName,
+        e?.applicationFee,
+        e?.serviceCharge
       ]);
 
   @override

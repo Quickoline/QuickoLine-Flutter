@@ -84,6 +84,12 @@ class UsersRecord extends FirestoreRecord {
   DocumentsStruct get userDocuments => _userDocuments ?? DocumentsStruct();
   bool hasUserDocuments() => _userDocuments != null;
 
+  // "legal_documents" field.
+  LegalDocumentStruct? _legalDocuments;
+  LegalDocumentStruct get legalDocuments =>
+      _legalDocuments ?? LegalDocumentStruct();
+  bool hasLegalDocuments() => _legalDocuments != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -100,6 +106,8 @@ class UsersRecord extends FirestoreRecord {
     _whatsappnumber = snapshotData['Whatsappnumber'] as String?;
     _userDocuments =
         DocumentsStruct.maybeFromMap(snapshotData['user_documents']);
+    _legalDocuments =
+        LegalDocumentStruct.maybeFromMap(snapshotData['legal_documents']);
   }
 
   static CollectionReference get collection =>
@@ -149,6 +157,7 @@ Map<String, dynamic> createUsersRecordData({
   String? nom,
   String? whatsappnumber,
   DocumentsStruct? userDocuments,
+  LegalDocumentStruct? legalDocuments,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -165,11 +174,15 @@ Map<String, dynamic> createUsersRecordData({
       'Nom': nom,
       'Whatsappnumber': whatsappnumber,
       'user_documents': DocumentsStruct().toMap(),
+      'legal_documents': LegalDocumentStruct().toMap(),
     }.withoutNulls,
   );
 
   // Handle nested data for "user_documents" field.
   addDocumentsStructData(firestoreData, userDocuments, 'user_documents');
+
+  // Handle nested data for "legal_documents" field.
+  addLegalDocumentStructData(firestoreData, legalDocuments, 'legal_documents');
 
   return firestoreData;
 }
@@ -193,7 +206,8 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         listEquality.equals(e1?.blockedUsers, e2?.blockedUsers) &&
         e1?.nom == e2?.nom &&
         e1?.whatsappnumber == e2?.whatsappnumber &&
-        e1?.userDocuments == e2?.userDocuments;
+        e1?.userDocuments == e2?.userDocuments &&
+        e1?.legalDocuments == e2?.legalDocuments;
   }
 
   @override
@@ -211,7 +225,8 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.blockedUsers,
         e?.nom,
         e?.whatsappnumber,
-        e?.userDocuments
+        e?.userDocuments,
+        e?.legalDocuments
       ]);
 
   @override

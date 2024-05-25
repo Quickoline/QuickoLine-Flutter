@@ -2,19 +2,18 @@
 export '/pages/home_page/home_page_widget.dart' show HomePageWidget;
 export '/pages/auth2/auth2_widget.dart' show Auth2Widget;
 export '/profile2/profile2_widget.dart' show Profile2Widget;
-export '/uploads/uploads_widget.dart' show UploadsWidget;
-export '/list/list_widget.dart' show ListWidget;
-export '/details/details_widget.dart' show DetailsWidget;
+export '/form_filling_pages/list/list_widget.dart' show ListWidget;
+export '/form_filling_pages/details/details_widget.dart' show DetailsWidget;
 export '/paid/paid_widget.dart' show PaidWidget;
-export '/pay/pay_widget.dart' show PayWidget;
-export '/upload_screen/upload_screen_widget.dart' show UploadScreenWidget;
+export '/form_filling_pages/upload_screen/upload_screen_widget.dart'
+    show UploadScreenWidget;
 export '/coming_soon/coming_soon_widget.dart' show ComingSoonWidget;
-export '/help_centre/help_centre_widget.dart' show HelpCentreWidget;
-export '/formwp/formwp_widget.dart' show FormwpWidget;
 export '/password/password_widget.dart' show PasswordWidget;
-export '/policy/policy_widget.dart' show PolicyWidget;
 export '/support_page/support_page_widget.dart' show SupportPageWidget;
 export '/profile/profile_widget.dart' show ProfileWidget;
-export '/terms/terms_widget.dart' show TermsWidget;
-export '/suppo/suppo_widget.dart' show SuppoWidget;
-export '/sidebar/sidebar_widget.dart' show SidebarWidget;
+export '/feedback/feedback_widget.dart' show FeedbackWidget;
+export '/legal_pages/legal/legal_widget.dart' show LegalWidget;
+export '/legal_pages/legal_details/legal_details_widget.dart'
+    show LegalDetailsWidget;
+export '/legal_pages/upload_screen_legal/upload_screen_legal_widget.dart'
+    show UploadScreenLegalWidget;

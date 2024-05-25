@@ -32,3 +32,13 @@ String examDateSeperator(List<DateTime> dates) {
     return result;
   }
 }
+
+bool validation(List<String> imageurl) {
+  // if any element in imageurl is empty then return false else return true
+  for (String url in imageurl) {
+    if (url.isEmpty) {
+      return false;
+    }
+  }
+  return true;
+}

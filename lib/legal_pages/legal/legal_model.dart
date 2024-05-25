@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'home_page_widget.dart' show HomePageWidget;
+import 'legal_widget.dart' show LegalWidget;
 import 'package:flutter/material.dart';
 
-class HomePageModel extends FlutterFlowModel<HomePageWidget> {
+class LegalModel extends FlutterFlowModel<LegalWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

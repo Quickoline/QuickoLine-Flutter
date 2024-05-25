@@ -64,7 +64,7 @@ class _PaidWidgetState extends State<PaidWidget> {
                           size: 25.0,
                         ),
                         onPressed: () async {
-                          context.pop();
+                          context.goNamed('HomePage');
                         },
                       ),
                     ],

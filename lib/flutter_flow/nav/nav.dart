@@ -8,7 +8,6 @@ import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
 import '/main.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 export 'package:go_router/go_router.dart';
@@ -102,11 +101,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : const Profile2Widget(),
         ),
         FFRoute(
-          name: 'uploads',
-          path: '/uploads',
-          builder: (context, params) => const UploadsWidget(),
-        ),
-        FFRoute(
           name: 'list',
           path: '/list',
           builder: (context, params) => const ListWidget(),
@@ -130,14 +124,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const PaidWidget(),
         ),
         FFRoute(
-          name: 'pay',
-          path: '/pay',
-          builder: (context, params) => const PayWidget(),
-        ),
-        FFRoute(
           name: 'UploadScreen',
           path: '/uploadScreen',
-          builder: (context, params) => const UploadScreenWidget(),
+          builder: (context, params) => UploadScreenWidget(
+            simpleFormName: params.getParam(
+              'simpleFormName',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['details'],
+            ),
+            send: params.getParam<DocumentStruct>(
+              'send',
+              ParamType.DataStruct,
+              isList: true,
+              structBuilder: DocumentStruct.fromSerializableMap,
+            ),
+          ),
         ),
         FFRoute(
           name: 'comingSoon',
@@ -145,24 +147,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const ComingSoonWidget(),
         ),
         FFRoute(
-          name: 'HelpCentre',
-          path: '/helpCentre',
-          builder: (context, params) => const HelpCentreWidget(),
-        ),
-        FFRoute(
-          name: 'formwp',
-          path: '/whatsapp',
-          builder: (context, params) => const FormwpWidget(),
-        ),
-        FFRoute(
           name: 'password',
           path: '/password',
           builder: (context, params) => const PasswordWidget(),
-        ),
-        FFRoute(
-          name: 'Policy',
-          path: '/policy',
-          builder: (context, params) => const PolicyWidget(),
         ),
         FFRoute(
           name: 'SupportPage',
@@ -175,21 +162,48 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const ProfileWidget(),
         ),
         FFRoute(
-          name: 'Terms',
-          path: '/terms',
-          builder: (context, params) => const TermsWidget(),
+          name: 'feedback',
+          path: '/feedback',
+          builder: (context, params) => const FeedbackWidget(),
         ),
         FFRoute(
-          name: 'suppo',
-          path: '/suppo',
-          builder: (context, params) => const SuppoWidget(),
+          name: 'legal',
+          path: '/legal',
+          builder: (context, params) => const LegalWidget(),
         ),
         FFRoute(
-          name: 'sidebar',
-          path: '/sidebar',
-          builder: (context, params) => const SidebarWidget(),
+          name: 'legalDetails',
+          path: '/legalDetails',
+          asyncParams: {
+            'legaldetails': getDoc(['legal'], LegalRecord.fromSnapshot),
+          },
+          builder: (context, params) => LegalDetailsWidget(
+            legaldetails: params.getParam(
+              'legaldetails',
+              ParamType.Document,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'UploadScreenLegal',
+          path: '/uploadScreenLegal',
+          builder: (context, params) => UploadScreenLegalWidget(
+            legalFormName: params.getParam(
+              'legalFormName',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['legal'],
+            ),
+            sendDetail: params.getParam<DocumentStruct>(
+              'sendDetail',
+              ParamType.DataStruct,
+              isList: true,
+              structBuilder: DocumentStruct.fromSerializableMap,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
+      observers: [routeObserver],
     );
 
 extension NavParamExtensions on Map<String, String?> {
@@ -374,15 +388,11 @@ class FFRoute {
                 )
               : builder(context, ffParams);
           final child = appStateNotifier.loading
-              ? Center(
-                  child: SizedBox(
-                    width: 50.0,
-                    height: 50.0,
-                    child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        FlutterFlowTheme.of(context).primary,
-                      ),
-                    ),
+              ? Container(
+                  color: Colors.transparent,
+                  child: Image.asset(
+                    'assets/images/Black_Gold_Glitter_Luxury_iOS_Home_Screen_20240523_213221_0001.gif',
+                    fit: BoxFit.cover,
                   ),
                 )
               : page;

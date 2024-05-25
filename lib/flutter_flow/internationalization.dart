@@ -195,7 +195,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hi': '',
     },
     'nqsga5xl': {
-      'en': 'Password',
+      'en': 'Create Password',
       'hi': '',
     },
     'o6pp8rcg': {
@@ -286,21 +286,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hi': '',
     },
   },
-  // uploads
-  {
-    'igofy150': {
-      'en': 'Document Upload',
-      'hi': '',
-    },
-    'g6xt3m5u': {
-      'en': 'Submit',
-      'hi': '',
-    },
-    'bjcgpso9': {
-      'en': 'Home',
-      'hi': '',
-    },
-  },
   // list
   {
     '37kgp541': {
@@ -374,8 +359,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Result Declared : ',
       'hi': '',
     },
+    'gad8fgsc': {
+      'en': 'Application Fees : Rs. ',
+      'hi': '',
+    },
     'ivy3brri': {
       'en': 'Required Documents',
+      'hi': '',
+    },
+    'xnvi97x0': {
+      'en': 'Service Charge: Rs. ',
       'hi': '',
     },
     'qh6m13gk': {
@@ -403,112 +396,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hi': '',
     },
   },
-  // pay
-  {
-    '7sszpfa8': {
-      'en': 'Invoice Amount',
-      'hi': '',
-    },
-    'yk5s1vdl': {
-      'en': 'DUE',
-      'hi': '',
-    },
-    'mllvktox': {
-      'en': 'Rs.49',
-      'hi': '',
-    },
-    'hstcv7gh': {
-      'en': 'Due on:',
-      'hi': '',
-    },
-    'kz208wo8': {
-      'en': 'April 17th, 2024',
-      'hi': '',
-    },
-    '0er4i95s': {
-      'en': 'Invoice #:',
-      'hi': '',
-    },
-    'wlxw1sme': {
-      'en': '5242124422',
-      'hi': '',
-    },
-    '5yu6v14a': {
-      'en': 'Note',
-      'hi': '',
-    },
-    'wz3kc3hh': {
-      'en': 'Pay Refundable 49 to Start the Process',
-      'hi': '',
-    },
-    'xgdlcag5': {
-      'en': 'Customer Information',
-      'hi': '',
-    },
-    '9qdyrj44': {
-      'en': 'Virat',
-      'hi': '',
-    },
-    'k89tb93c': {
-      'en': 'iviratking@gmail.com',
-      'hi': '',
-    },
-    'bxgha1ou': {
-      'en': 'Billing Address:',
-      'hi': '',
-    },
-    '3cwtetbn': {
-      'en': 'Harraiya, Basti,272155',
-      'hi': '',
-    },
-    '27yaxmqe': {
-      'en': 'Customer Since:',
-      'hi': '',
-    },
-    'kmy64zzs': {
-      'en': 'May 30th, 2021',
-      'hi': '',
-    },
-    '7wdrhbi9': {
-      'en': 'Pay Refundablen Rs.49',
-      'hi': '',
-    },
-    'vv05s1yf': {
-      'en': 'Payment',
-      'hi': '',
-    },
-    '4d021nm7': {
-      'en': 'Home',
-      'hi': '',
-    },
-  },
   // UploadScreen
   {
     'v40383jr': {
       'en': 'Documents Upload',
       'hi': '',
     },
-    'll3xblel': {
-      'en': 'Aadhar Card',
-      'hi': '',
-    },
     'pt6pvqyg': {
-      'en': 'Upload',
-      'hi': '',
-    },
-    '7q90yifx': {
-      'en': 'Photo',
-      'hi': '',
-    },
-    'v5mziuo2': {
-      'en': 'Upload',
-      'hi': '',
-    },
-    '0llueem4': {
-      'en': 'Signature',
-      'hi': '',
-    },
-    'vggfa3x0': {
       'en': 'Upload',
       'hi': '',
     },
@@ -528,64 +422,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hi': '',
     },
     'auq63o1u': {
-      'en': 'Home',
-      'hi': '',
-    },
-  },
-  // HelpCentre
-  {
-    'ym7aonwq': {
-      'en': 'Help',
-      'hi': '',
-    },
-    '20yppro7': {
-      'en': 'Welcome to support',
-      'hi': '',
-    },
-    'diih32d7': {
-      'en': ' Name',
-      'hi': '',
-    },
-    'arjxw4hv': {
-      'en': 'Phone Number',
-      'hi': '',
-    },
-    '2bjd8gh7': {
-      'en': 'Message',
-      'hi': '',
-    },
-    'zak30by3': {
-      'en': 'Enter Your Message',
-      'hi': '',
-    },
-    'el3cq7j4': {
-      'en': 'Upload Screenshot',
-      'hi': '',
-    },
-    'v3ofzvv4': {
-      'en': 'Submit ',
-      'hi': '',
-    },
-    'rrkwdxeh': {
-      'en': 'Home',
-      'hi': '',
-    },
-  },
-  // formwp
-  {
-    'cj9frj18': {
-      'en': 'Enter Your Whatsapp Number',
-      'hi': '',
-    },
-    'zf8ghwr1': {
-      'en': 'Whatsapp Number',
-      'hi': '',
-    },
-    '4nf4662y': {
-      'en': 'Submit ',
-      'hi': '',
-    },
-    '7wc6y1n0': {
       'en': 'Home',
       'hi': '',
     },
@@ -626,17 +462,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'hi': '',
     },
   },
-  // Policy
-  {
-    'tflr6gox': {
-      'en': 'Page Title',
-      'hi': '',
-    },
-    'fiflrpup': {
-      'en': 'Home',
-      'hi': '',
-    },
-  },
   // SupportPage
   {
     'bc1iog3u': {
@@ -655,48 +480,25 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Email Us',
       'hi': '',
     },
-    '0qj3dt1y': {
-      'en': 'Review FAQ\'s below',
-      'hi': '',
-    },
-    '3vpfm4zs': {
-      'en': 'How do I download Code?',
-      'hi': '',
-    },
-    'suxvwsn9': {
-      'en':
-          'Showcase a couple of eye-catching screenshots or mockups of your UI Kit to capture attention and give users a glimpse of what they can expect.',
-      'hi': '',
-    },
-    '3fonbwzv': {
-      'en': 'How do I download Code?',
-      'hi': '',
-    },
-    'h1pf5k4t': {
-      'en':
-          'Showcase a couple of eye-catching screenshots or mockups of your UI Kit to capture attention and give users a glimpse of what they can expect.',
-      'hi': '',
-    },
-    'vskra3jg': {
-      'en': 'How do I download Code?',
-      'hi': '',
-    },
-    'qj7gb95y': {
-      'en':
-          'Showcase a couple of eye-catching screenshots or mockups of your UI Kit to capture attention and give users a glimpse of what they can expect.',
-      'hi': '',
-    },
     'iz58fsr9': {
       'en': 'Get support',
       'hi': '',
     },
-    'mb9syxqm': {
+    '7wc6y1n0': {
       'en': 'Home',
       'hi': '',
     },
   },
   // profile
   {
+    '2ardklri': {
+      'en': 'Update your Profile',
+      'hi': '',
+    },
+    '8dah6y6h': {
+      'en': 'Edit photo',
+      'hi': '',
+    },
     'vhlmzqgn': {
       'en': 'Name',
       'hi': '',
@@ -713,128 +515,99 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Save Changes',
       'hi': '',
     },
-    'y94fdfgr': {
-      'en': 'Update your Profile',
-      'hi': '',
-    },
   },
-  // Terms
+  // feedback
   {
-    's001597w': {
-      'en': 'Terms & Conditions',
+    'd5xg974g': {
+      'en': 'What we can do better?',
       'hi': '',
     },
-    'u0lfdpgd': {
-      'en': 'Home',
+    '7ytveosx': {
+      'en': 'Description',
       'hi': '',
     },
-  },
-  // suppo
-  {
-    'o5fwdn46': {
-      'en': 'Review Terms & Conditions',
+    '8lg434ts': {
+      'en': 'Submit',
       'hi': '',
     },
-    'yy4jjha1': {
-      'en': 'Hello World',
+    'nbx4rhte': {
+      'en': 'Feedback',
       'hi': '',
-    },
-    '8z4878pw': {
-      'en': 'Hello World',
-      'hi': '',
-    },
-    'vmkndvze': {
-      'en': 'Hello World',
-      'hi': '',
-    },
-    'dskrkbf1': {
-      'en': 'Hello World',
-      'hi': '',
-    },
-    'e4o9r1rp': {
-      'en': 'Hello World',
-      'hi': '',
-    },
-    'vf0ujcp6': {
-      'en': 'Hello World',
-      'hi': '',
-    },
-    'cym9itku': {
-      'en': 'Hello World',
-      'hi': '',
-    },
-    '2hazmoka': {
-      'en': 'Hello World',
-      'hi': '',
-    },
-    'jssg27nh': {
-      'en': 'Hello World',
-      'hi': '',
-    },
-    '543cp7u2': {
-      'en': 'Hello World',
-      'hi': '',
-    },
-    '9l34w4dq': {
-      'en': 'Hello World',
-      'hi': '',
-    },
-    '5pa5dt30': {
-      'en': 'Hello World',
-      'hi': '',
-    },
-    'muy76mf2': {
-      'en': 'Hello World',
-      'hi': '',
-    },
-    'sy0v7jai': {
-      'en': 'Hello World',
-      'hi': '',
-    },
-    'zl08d4j6': {
-      'en': 'Hello World',
-      'hi': '',
-    },
-    'zb07hfqo': {
-      'en': 'Terms & Conditions',
-      'hi': '',
-    },
-    '4ybo1ias': {
-      'en': 'Home',
-      'hi': '',
-    },
-  },
-  // sidebar
-  {
-    'a6bma5ak': {
-      'en': 'Dashboard',
-      'hi': '',
-    },
-    'uga1h1av': {
-      'en': 'Trending',
-      'hi': '',
-    },
-    '400le3bs': {
-      'en': 'Policies',
-      'hi': '',
-    },
-    'kudsj4fy': {
-      'en': 'Rate Us',
-      'hi': '',
-    },
-    'q6jjw5ie': {
-      'en': 'Help',
-      'hi': '',
-    },
-    '7fhwisge': {
-      'en': 'Switch to Dark Mode',
-      'hi': 'डार्क मोड में जाएं',
-    },
-    '7uh3uzwm': {
-      'en': 'Log Out',
-      'hi': 'लाग आउट ',
     },
     'tr2600m2': {
+      'en': 'Home',
+      'hi': '',
+    },
+  },
+  // legal
+  {
+    '30jurmqj': {
+      'en': 'Search',
+      'hi': '',
+    },
+    '6hcmzne9': {
+      'en': 'NEET',
+      'hi': '',
+    },
+    'yrwxowul': {
+      'en': 'CUET',
+      'hi': '',
+    },
+    '4y8x9xe0': {
+      'en': 'UPSC',
+      'hi': '',
+    },
+    'ju9n8yzm': {
+      'en': 'SSC',
+      'hi': '',
+    },
+    '7r3dho6f': {
+      'en': 'JEECUP',
+      'hi': '',
+    },
+    'aoxb2xlx': {
+      'en': 'Legal Work',
+      'hi': '',
+    },
+    'w6j0c93v': {
+      'en': 'Home',
+      'hi': '',
+    },
+  },
+  // legalDetails
+  {
+    '6bg31sx0': {
+      'en': 'Legal Work',
+      'hi': '',
+    },
+    '498qke10': {
+      'en': 'Required Documents',
+      'hi': '',
+    },
+    'czvyrnuc': {
+      'en': 'Service Charge: Rs. ',
+      'hi': '',
+    },
+    '15lal47n': {
+      'en': 'Apply Now',
+      'hi': '',
+    },
+  },
+  // UploadScreenLegal
+  {
+    'vswcwfsn': {
+      'en': 'Documents Upload',
+      'hi': '',
+    },
+    'vexf0d45': {
+      'en': 'Upload',
+      'hi': '',
+    },
+    'eybqtx4e': {
+      'en': 'Submit',
+      'hi': '',
+    },
+    'vz3cc1bw': {
       'en': 'Home',
       'hi': '',
     },
