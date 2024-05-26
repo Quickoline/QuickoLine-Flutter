@@ -391,7 +391,7 @@ class FFRoute {
               ? Container(
                   color: Colors.transparent,
                   child: Image.asset(
-                    'assets/images/Black_Gold_Glitter_Luxury_iOS_Home_Screen_20240523_213221_0001.gif',
+                    'assets/images/splashdone.gif',
                     fit: BoxFit.cover,
                   ),
                 )

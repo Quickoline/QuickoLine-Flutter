@@ -253,10 +253,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'WELCOME',
       'hi': 'वेलकम',
     },
-    'qcwqig28': {
-      'en': 'Switch to Dark Mode',
-      'hi': 'डार्क मोड में जाएं',
-    },
     '0xnbtx8l': {
       'en': 'Switch to Light Mode',
       'hi': 'लाइट मोड में जाएं ',
@@ -361,6 +357,42 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'gad8fgsc': {
       'en': 'Application Fees : Rs. ',
+      'hi': '',
+    },
+    'd59i227u': {
+      'en': '(General)',
+      'hi': '',
+    },
+    '5c0c80m2': {
+      'en': ' Rs.',
+      'hi': '',
+    },
+    'nzqs22pg': {
+      'en': '(OBC)',
+      'hi': '',
+    },
+    'g89gsk8o': {
+      'en': ' Rs.',
+      'hi': '',
+    },
+    'tz4vsjs6': {
+      'en': '(EWS)',
+      'hi': '',
+    },
+    'poyjbn03': {
+      'en': ' Rs.',
+      'hi': '',
+    },
+    'fwz26q2j': {
+      'en': '(SC)',
+      'hi': '',
+    },
+    '4bg27dph': {
+      'en': ' Rs.',
+      'hi': '',
+    },
+    'pzmgq3ny': {
+      'en': '(ST)',
       'hi': '',
     },
     'ivy3brri': {

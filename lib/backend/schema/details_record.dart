@@ -70,15 +70,35 @@ class DetailsRecord extends FirestoreRecord {
   String get examName => _examName ?? '';
   bool hasExamName() => _examName != null;
 
-  // "application_fee" field.
-  double? _applicationFee;
-  double get applicationFee => _applicationFee ?? 0.0;
-  bool hasApplicationFee() => _applicationFee != null;
-
   // "service_charge" field.
   double? _serviceCharge;
   double get serviceCharge => _serviceCharge ?? 0.0;
   bool hasServiceCharge() => _serviceCharge != null;
+
+  // "applicationfee_Gen" field.
+  int? _applicationfeeGen;
+  int get applicationfeeGen => _applicationfeeGen ?? 0;
+  bool hasApplicationfeeGen() => _applicationfeeGen != null;
+
+  // "applicationfee_St" field.
+  int? _applicationfeeSt;
+  int get applicationfeeSt => _applicationfeeSt ?? 0;
+  bool hasApplicationfeeSt() => _applicationfeeSt != null;
+
+  // "applicationfee_obc" field.
+  int? _applicationfeeObc;
+  int get applicationfeeObc => _applicationfeeObc ?? 0;
+  bool hasApplicationfeeObc() => _applicationfeeObc != null;
+
+  // "applicationfee_sc" field.
+  int? _applicationfeeSc;
+  int get applicationfeeSc => _applicationfeeSc ?? 0;
+  bool hasApplicationfeeSc() => _applicationfeeSc != null;
+
+  // "applicationfee_ews" field.
+  int? _applicationfeeEws;
+  int get applicationfeeEws => _applicationfeeEws ?? 0;
+  bool hasApplicationfeeEws() => _applicationfeeEws != null;
 
   void _initializeFields() {
     _appStartDate = snapshotData['app_start_date'] as DateTime?;
@@ -92,8 +112,12 @@ class DetailsRecord extends FirestoreRecord {
     _resultDate = snapshotData['result_date'] as DateTime?;
     _requiredDocuments = getDataList(snapshotData['required_documents']);
     _examName = snapshotData['exam_name'] as String?;
-    _applicationFee = castToType<double>(snapshotData['application_fee']);
     _serviceCharge = castToType<double>(snapshotData['service_charge']);
+    _applicationfeeGen = castToType<int>(snapshotData['applicationfee_Gen']);
+    _applicationfeeSt = castToType<int>(snapshotData['applicationfee_St']);
+    _applicationfeeObc = castToType<int>(snapshotData['applicationfee_obc']);
+    _applicationfeeSc = castToType<int>(snapshotData['applicationfee_sc']);
+    _applicationfeeEws = castToType<int>(snapshotData['applicationfee_ews']);
   }
 
   static CollectionReference get collection =>
@@ -140,8 +164,12 @@ Map<String, dynamic> createDetailsRecordData({
   DateTime? answerKeyDate,
   DateTime? resultDate,
   String? examName,
-  double? applicationFee,
   double? serviceCharge,
+  int? applicationfeeGen,
+  int? applicationfeeSt,
+  int? applicationfeeObc,
+  int? applicationfeeSc,
+  int? applicationfeeEws,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -154,8 +182,12 @@ Map<String, dynamic> createDetailsRecordData({
       'answer_key_date': answerKeyDate,
       'result_date': resultDate,
       'exam_name': examName,
-      'application_fee': applicationFee,
       'service_charge': serviceCharge,
+      'applicationfee_Gen': applicationfeeGen,
+      'applicationfee_St': applicationfeeSt,
+      'applicationfee_obc': applicationfeeObc,
+      'applicationfee_sc': applicationfeeSc,
+      'applicationfee_ews': applicationfeeEws,
     }.withoutNulls,
   );
 
@@ -179,8 +211,12 @@ class DetailsRecordDocumentEquality implements Equality<DetailsRecord> {
         e1?.resultDate == e2?.resultDate &&
         listEquality.equals(e1?.requiredDocuments, e2?.requiredDocuments) &&
         e1?.examName == e2?.examName &&
-        e1?.applicationFee == e2?.applicationFee &&
-        e1?.serviceCharge == e2?.serviceCharge;
+        e1?.serviceCharge == e2?.serviceCharge &&
+        e1?.applicationfeeGen == e2?.applicationfeeGen &&
+        e1?.applicationfeeSt == e2?.applicationfeeSt &&
+        e1?.applicationfeeObc == e2?.applicationfeeObc &&
+        e1?.applicationfeeSc == e2?.applicationfeeSc &&
+        e1?.applicationfeeEws == e2?.applicationfeeEws;
   }
 
   @override
@@ -196,8 +232,12 @@ class DetailsRecordDocumentEquality implements Equality<DetailsRecord> {
         e?.resultDate,
         e?.requiredDocuments,
         e?.examName,
-        e?.applicationFee,
-        e?.serviceCharge
+        e?.serviceCharge,
+        e?.applicationfeeGen,
+        e?.applicationfeeSt,
+        e?.applicationfeeObc,
+        e?.applicationfeeSc,
+        e?.applicationfeeEws
       ]);
 
   @override

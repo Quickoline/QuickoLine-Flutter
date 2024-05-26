@@ -7,7 +7,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -537,48 +536,29 @@ class _UploadScreenWidgetState extends State<UploadScreenWidget>
                               0.0, 66.0, 0.0, 44.0),
                           child: FFButtonWidget(
                             onPressed: () async {
-                              if (functions.validation(_model.savePhoto
-                                  .map((e) => e.image)
-                                  .toList())) {
-                                await OrderRecord.collection.doc().set({
-                                  ...createOrderRecordData(
-                                    orderStatus: 'confirm',
-                                    createdAt: getCurrentTimestamp,
-                                    userReference: currentUserReference,
-                                    serviceName: widget.simpleFormName,
-                                  ),
-                                  ...mapToFirestore(
-                                    {
-                                      'document': getDocumentListFirestoreData(
-                                        _model.savePhoto,
-                                      ),
-                                    },
-                                  ),
-                                });
-
-                                context.pushNamed('Paid');
-
-                                setState(() {
-                                  _model.savePhoto = widget.send!
-                                      .toList()
-                                      .cast<DocumentStruct>();
-                                });
-                              } else {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text(
-                                      'Please upload the required documents.',
-                                      style: TextStyle(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                      ),
+                              await OrderRecord.collection.doc().set({
+                                ...createOrderRecordData(
+                                  orderStatus: 'confirm',
+                                  createdAt: getCurrentTimestamp,
+                                  userReference: currentUserReference,
+                                  serviceName: widget.simpleFormName,
+                                ),
+                                ...mapToFirestore(
+                                  {
+                                    'document': getDocumentListFirestoreData(
+                                      _model.savePhoto,
                                     ),
-                                    duration: const Duration(milliseconds: 4000),
-                                    backgroundColor:
-                                        FlutterFlowTheme.of(context).secondary,
-                                  ),
-                                );
-                              }
+                                  },
+                                ),
+                              });
+
+                              context.pushNamed('Paid');
+
+                              setState(() {
+                                _model.savePhoto = widget.send!
+                                    .toList()
+                                    .cast<DocumentStruct>();
+                              });
                             },
                             text: FFLocalizations.of(context).getText(
                               '7ltz59z2' /* Submit */,

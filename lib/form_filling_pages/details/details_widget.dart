@@ -470,13 +470,100 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                                     ),
                                     TextSpan(
                                       text: valueOrDefault<String>(
-                                        widget.exam?.applicationFee.toString(),
+                                        widget.exam?.applicationfeeGen
+                                            .toString(),
                                         'a',
                                       ),
                                       style: TextStyle(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryText,
                                       ),
+                                    ),
+                                    TextSpan(
+                                      text: FFLocalizations.of(context).getText(
+                                        'd59i227u' /* (General) */,
+                                      ),
+                                      style: const TextStyle(),
+                                    ),
+                                    TextSpan(
+                                      text: FFLocalizations.of(context).getText(
+                                        '5c0c80m2' /*  Rs. */,
+                                      ),
+                                      style: const TextStyle(),
+                                    ),
+                                    TextSpan(
+                                      text: valueOrDefault<String>(
+                                        widget.exam?.applicationfeeObc
+                                            .toString(),
+                                        'b',
+                                      ),
+                                      style: const TextStyle(),
+                                    ),
+                                    TextSpan(
+                                      text: FFLocalizations.of(context).getText(
+                                        'nzqs22pg' /* (OBC) */,
+                                      ),
+                                      style: const TextStyle(),
+                                    ),
+                                    TextSpan(
+                                      text: FFLocalizations.of(context).getText(
+                                        'g89gsk8o' /*  Rs. */,
+                                      ),
+                                      style: const TextStyle(),
+                                    ),
+                                    TextSpan(
+                                      text: valueOrDefault<String>(
+                                        widget.exam?.applicationfeeEws
+                                            .toString(),
+                                        'c',
+                                      ),
+                                      style: const TextStyle(),
+                                    ),
+                                    TextSpan(
+                                      text: FFLocalizations.of(context).getText(
+                                        'tz4vsjs6' /* (EWS) */,
+                                      ),
+                                      style: const TextStyle(),
+                                    ),
+                                    TextSpan(
+                                      text: FFLocalizations.of(context).getText(
+                                        'poyjbn03' /*  Rs. */,
+                                      ),
+                                      style: const TextStyle(),
+                                    ),
+                                    TextSpan(
+                                      text: valueOrDefault<String>(
+                                        widget.exam?.applicationfeeSc
+                                            .toString(),
+                                        'd',
+                                      ),
+                                      style: const TextStyle(),
+                                    ),
+                                    TextSpan(
+                                      text: FFLocalizations.of(context).getText(
+                                        'fwz26q2j' /* (SC) */,
+                                      ),
+                                      style: const TextStyle(),
+                                    ),
+                                    TextSpan(
+                                      text: FFLocalizations.of(context).getText(
+                                        '4bg27dph' /*  Rs. */,
+                                      ),
+                                      style: const TextStyle(),
+                                    ),
+                                    TextSpan(
+                                      text: valueOrDefault<String>(
+                                        widget.exam?.applicationfeeSt
+                                            .toString(),
+                                        'f',
+                                      ),
+                                      style: const TextStyle(),
+                                    ),
+                                    TextSpan(
+                                      text: FFLocalizations.of(context).getText(
+                                        'pzmgq3ny' /* (ST) */,
+                                      ),
+                                      style: const TextStyle(),
                                     )
                                   ],
                                   style: FlutterFlowTheme.of(context)
