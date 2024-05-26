@@ -321,7 +321,8 @@ class _UploadScreenWidgetState extends State<UploadScreenWidget>
                                                                 ],
                                                               ),
                                                               Container(
-                                                                width: 100.0,
+                                                                width: double
+                                                                    .infinity,
                                                                 height: 40.0,
                                                                 decoration:
                                                                     BoxDecoration(
@@ -338,8 +339,10 @@ class _UploadScreenWidgetState extends State<UploadScreenWidget>
                                                                               1.05),
                                                                       child:
                                                                           Container(
-                                                                        width:
-                                                                            100.0,
+                                                                        width: double
+                                                                            .infinity,
+                                                                        height:
+                                                                            40.0,
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:

@@ -315,7 +315,8 @@ class _UploadScreenLegalWidgetState extends State<UploadScreenLegalWidget>
                                                           ],
                                                         ),
                                                         Container(
-                                                          width: 100.0,
+                                                          width:
+                                                              double.infinity,
                                                           height: 40.0,
                                                           decoration:
                                                               BoxDecoration(
